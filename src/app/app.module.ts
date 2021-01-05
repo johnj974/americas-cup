@@ -8,6 +8,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewsComponent } from './news/news.component';
+import { CompetitionComponent } from './competition/competition.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NewsComponent } from './news/news.component';
     TeamsComponent,
     PageNotFoundComponent,
     NewsComponent,
+    CompetitionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

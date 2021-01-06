@@ -1,1 +1,122 @@
-<p>competition works!</p>
+<section id="competition">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <!-- form2 -->
+      <div class="col-md-6">
+        <form (ngSubmit)="onSaveForm(entryForm)" #entryForm="ngForm">
+          <div class="form-group input-gap">
+            <label for="name" class="bold">Name</label>
+            <input
+              type="text"
+              class="form-control bg-contrast"
+              placeholder="Full Name"
+              required
+              ngModel
+              name="name"
+            />
+          </div>
+
+          <label for="contact_email" class="bold mb-0">Email address</label>
+          <small
+            id="emailHelp"
+            class="form-text text-secondary mt-0 mb-2 italic"
+            >We'll never share your email with anyone else.</small
+          >
+          <div class="form-group input-gap">
+            <div class="input-group">
+              <input
+                type="email"
+                name="email"
+                id="contact_email"
+                class="form-control bg-contrast"
+                placeholder="Valid Email"
+                required
+                ngModel
+              />
+            </div>
+          </div>
+
+          <div class="form-group input-gap">
+            <label for="phone" class="bold">Phone</label>
+            <input
+              type="number"
+              name="phone"
+              id="contact_subject"
+              class="form-control bg-contrast"
+              placeholder="Phone"
+              required
+              ngModel
+            />
+          </div>
+
+          <div class="form-group input-gap">
+            <label for="subject" class="bold">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              class="form-control bg-contrast"
+              placeholder="Subject"
+              required
+              ngModel
+            />
+          </div>
+
+          <div class="form-group input-gap">
+            <label for="message" class="bold">Message</label>
+            <textarea
+              name="message"
+              class="form-control bg-contrast"
+              placeholder="What do you want to let us know?"
+              rows="8"
+              required
+              ngModel
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-rounded">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

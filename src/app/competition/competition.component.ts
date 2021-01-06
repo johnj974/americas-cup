@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-competition',
   templateUrl: './competition.component.html',
-  styleUrls: ['./competition.component.css']
+  styleUrls: ['./competition.component.css'],
 })
 export class CompetitionComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  onSaveForm(entryForm: NgForm) {
+    console.log(entryForm);
   }
-
 }

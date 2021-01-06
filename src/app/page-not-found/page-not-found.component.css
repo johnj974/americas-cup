@@ -1,0 +1,14 @@
+#pageNotFound {
+  background-image: url("../../assets/images/sinking-boat.png");
+  height: 100vh;
+}
+
+.row {
+  height: 90vh;
+}
+
+#message {
+  border: 3px solid red;
+  opacity: 0.8;
+  border-radius: 10px;
+}

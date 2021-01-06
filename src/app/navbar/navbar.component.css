@@ -1,7 +1,12 @@
 .navbar {
   border-bottom: 3px solid red;
 }
-.active {
+.active.left {
   border-bottom: 1px solid red;
   border-left: 1px solid red;
+}
+
+.active.right {
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
 }

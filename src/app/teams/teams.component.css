@@ -1,0 +1,27 @@
+.row {
+  height: 50vh;
+}
+
+.team1 {
+  background-image: url(../../assets/images/italian-boat.jpg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.team2 {
+  background-image: url(../../assets/images/uk-boat.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team3 {
+  background-image: url(../../assets/images/new-zealand-boat2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team4 {
+  background-image: url(../../assets/images/american-boat.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

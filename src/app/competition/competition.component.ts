@@ -14,4 +14,6 @@ export class CompetitionComponent implements OnInit {
   onSaveForm(entryForm: NgForm) {
     console.log(entryForm);
   }
+
+  winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'England'];
 }

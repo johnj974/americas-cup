@@ -1,38 +1,21 @@
-<section id="competition">
-  <div class="container">
+<section id="competition ">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <form></form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
+        <div class="row">
+          <img
+            src="https://americascup-2021.s3.amazonaws.com/images/m157_crop169014_1024x576_proportional_1534495960141A.jpg"
+            alt=""
+            class="img-fluid"
           />
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+        <div class="row">
+          <img
+            src="https://e0.365dm.com/20/11/2048x1152/skysports-americas-cup-sailing_5189913.jpg"
+            alt=""
+            class="img-fluid"
+          />
         </div>
-        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-        <!-- </form> -->
       </div>
       <!-- form2 -->
       <div class="col-md-6">
@@ -83,7 +66,7 @@
           </div>
 
           <div class="form-group input-gap">
-            <!-- <label for="subject" class="bold">Subject</label>
+            <label for="subject" class="bold">Subject</label>
             <input
               type="text"
               name="subject"
@@ -91,12 +74,22 @@
               placeholder="Subject"
               required
               ngModel
-            /> -->
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="winnerChoice">Who will win?</label
+            ><select
+              ngModel
+              name="winnerChoice"
+              id="winnerChoice"
+              class="form-control"
+              required
+            >
+              <option value="" disabled selected hidden>Choose a Winner</option>
+              <option [value]="winner" *ngFor="let winner of winnersList">
+                {{ winner }}
+              </option>
             </select>
           </div>
 

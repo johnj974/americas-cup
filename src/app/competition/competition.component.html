@@ -1,3 +1,4 @@
+<h1 class="text-center pt-4">Competition</h1>
 <section id="competition ">
   <div class="container mt-5">
     <div class="row">
@@ -20,7 +21,7 @@
       <!-- form2 -->
       <div class="col-md-6">
         <form (ngSubmit)="onSaveForm(entryForm)" #entryForm="ngForm">
-          <div class="form-group input-gap">
+          <div class="form-group">
             <label for="name" class="bold">Name</label>
             <input
               type="text"
@@ -29,7 +30,12 @@
               required
               ngModel
               name="name"
+              required
+              #nameRef="ngModel"
             />
+            <div *ngIf="!nameRef.value && nameRef.touched">
+              <small class="text-danger">Please enter a name</small>
+            </div>
           </div>
 
           <label for="contact_email" class="bold mb-0">Email address</label>
@@ -38,7 +44,7 @@
             class="form-text text-secondary mt-0 mb-2 italic"
             >We'll never share your email with anyone else.</small
           >
-          <div class="form-group input-gap">
+          <div class="form-group">
             <div class="input-group">
               <input
                 type="email"
@@ -48,11 +54,15 @@
                 placeholder="Valid Email"
                 required
                 ngModel
+                #emailRef="ngModel"
               />
+            </div>
+            <div *ngIf="!emailRef.value && emailRef.touched">
+              <small class="text-danger">Please enter a valid email</small>
             </div>
           </div>
 
-          <div class="form-group input-gap">
+          <div class="form-group">
             <label for="phone" class="bold">Phone</label>
             <input
               type="text"
@@ -60,19 +70,6 @@
               id="contact_subject"
               class="form-control bg-contrast"
               placeholder="Phone"
-              required
-              ngModel
-            />
-          </div>
-
-          <div class="form-group input-gap">
-            <label for="subject" class="bold">Subject</label>
-            <input
-              type="text"
-              name="subject"
-              class="form-control bg-contrast"
-              placeholder="Subject"
-              required
               ngModel
             />
           </div>
@@ -85,28 +82,38 @@
               id="winnerChoice"
               class="form-control"
               required
+              #winnerRef="ngModel"
             >
               <option value="" disabled selected hidden>Choose a Winner</option>
               <option [value]="winner" *ngFor="let winner of winnersList">
                 {{ winner }}
               </option>
             </select>
+            <div *ngIf="!winnerRef.value && winnerRef.touched">
+              <small class="text-danger">Please enter a Team</small>
+            </div>
           </div>
 
-          <div class="form-group input-gap">
+          <div class="form-group">
             <label for="message" class="bold">Message</label>
             <textarea
               name="message"
               class="form-control bg-contrast"
-              placeholder="Tell Davy Jones your secrets?"
-              rows="8"
-              required
+              placeholder="Why will your team win?"
+              rows="5"
               ngModel
             ></textarea>
           </div>
 
           <div class="form-group">
-            <button class="btn btn-primary btn-rounded">Send Message</button>
+            <div class="d-grid gap-2">
+              <button
+                class="btn btn-dark btn-rounded"
+                [disabled]="!entryForm.valid"
+              >
+                Enter Competition
+              </button>
+            </div>
           </div>
         </form>
       </div>

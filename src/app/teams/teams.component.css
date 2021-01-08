@@ -5,23 +5,27 @@
 .team1 {
   background-image: url(../../assets/images/italian-boat.jpg);
   background-size: cover;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .team2 {
   background-image: url(../../assets/images/uk-boat.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .team3 {
   background-image: url(../../assets/images/new-zealand-boat2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .team4 {
   background-image: url(../../assets/images/american-boat.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }

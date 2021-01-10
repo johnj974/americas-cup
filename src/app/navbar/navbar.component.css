@@ -1,5 +1,6 @@
 .navbar {
   border-bottom: 3px solid red;
+  opacity: 0.9;
 }
 .active.left {
   border-bottom: 1px solid red;

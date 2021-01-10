@@ -1,0 +1,17 @@
+.navbar {
+  border-top: 3px solid red;
+  opacity: 0.9;
+}
+.active.left {
+  border-bottom: 1px solid red;
+  border-left: 1px solid red;
+}
+
+.active.right {
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.nav-link {
+  padding-left: 5px;
+}

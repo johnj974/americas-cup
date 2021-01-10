@@ -13,10 +13,13 @@
 
 .a {
   grid-area: 1 / 3 / 6 / 12;
-  background-color: green;
+  background-image: url(../../assets/images/americas-bow.jpg);
 }
 .a-main {
   grid-area: 2 / 2 / 3 / 5;
+}
+.a-text {
+  grid-area: 3 / 3 / 5 / 6;
 }
 
 .b {
@@ -57,7 +60,10 @@
 
 .f {
   grid-area: 18 / 1 / 25 / 11;
-  background-color: darkgoldenrod;
+  background-image: url(../../assets/images/italy3-boat.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .f-main {
   grid-area: 20 / 9 / 22 / 12;

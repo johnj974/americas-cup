@@ -8,7 +8,7 @@
   width: 900px;
   height: 3000px;
   margin: auto;
-  grid-template: repeat(30, 1fr) / repeat(12, 1fr);
+  grid-template: repeat(25, 1fr) / repeat(12, 1fr);
 }
 
 .a {

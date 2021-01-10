@@ -1,38 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1"
-      ><i class="fa fa-2x fa-trophy align-middle"></i>Americas Cup</span
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li
-          class="nav-item"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLinkActive="active right"
-        >
-          <a class="nav-link" routerLink="/">Home</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active right">
-          <a class="nav-link" routerLink="teams">Teams</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active left">
-          <a class="nav-link" routerLink="news">News</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active left">
-          <a class="nav-link ps-3" routerLink="competition">Competition</a>
-        </li>
-      </ul>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Americas Cup</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque
+          ea quis molestias. Fugiat pariatur maxime quis culpa corporis vitae
+          repudiandae aliquam voluptatem veniam, est atque cumque eum delectus
+          sint!
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Navigation</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a routerLink="/">Home</a>
+          </li>
+          <li>
+            <a routerLink="teams">Teams</a>
+          </li>
+          <li>
+            <a routerLink="news">News</a>
+          </li>
+          <li>
+            <a routerLink="competition">Competition</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Teams</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#">New Zealand</a>
+          </li>
+          <li>
+            <a href="#">Italy</a>
+          </li>
+          <li>
+            <a href="#">UK</a>
+          </li>
+          <li>
+            <a href="#">USA</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</nav>
+
+  <div class="text-center p-3 bg-danger">
+    © 2020 Copyright:
+    <a href="#" class="text-white">Americas Cup Media</a>
+  </div>
+</footer>

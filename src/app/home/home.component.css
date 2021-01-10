@@ -5,8 +5,8 @@
 
 .grid {
   display: grid;
-  width: 900px;
-  height: 3000px;
+  /* width: 900px; */
+  height: 2500px;
   margin: auto;
   grid-template: repeat(25, 1fr) / repeat(12, 1fr);
 }
@@ -14,6 +14,9 @@
 .a {
   grid-area: 1 / 3 / 6 / 12;
   background-image: url(../../assets/images/americas-bow.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
 }
 .a-main {
   grid-area: 2 / 2 / 3 / 5;
@@ -67,4 +70,32 @@
 }
 .f-main {
   grid-area: 20 / 9 / 22 / 12;
+}
+
+/* media query */
+@media (max-width: 600px) {
+  #grid-area {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 600px) {
+  .a {
+    grid-area: 1 / 1 / 5 / 13;
+  }
+  .b {
+    grid-area: 5 / 1 / 9 / 13;
+  }
+  .c {
+    grid-area: 9 / 1 / 13 / 13;
+  }
+  .d {
+    grid-area: 13 / 1 / 17 / 13;
+  }
+  .e {
+    grid-area: 17 / 1 / 21 / 13;
+  }
+  .f {
+    grid-area: 21 / 1 / 25 / 13;
+  }
 }

@@ -11,6 +11,7 @@ import { NewsComponent } from './news/news.component';
 import { CompetitionComponent } from './competition/competition.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     NewsComponent,
     CompetitionComponent,
     FooterComponent,
+    TeamComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

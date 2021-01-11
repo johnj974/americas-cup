@@ -16,7 +16,7 @@
   background-image: url(../../assets/images/americas-bow.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
 }
 .a-main {
   grid-area: 2 / 2 / 3 / 5;
@@ -62,7 +62,7 @@
 }
 
 .f {
-  grid-area: 18 / 1 / 25 / 11;
+  grid-area: 18 / 1 / 26 / 11;
   background-image: url(../../assets/images/italy3-boat.jpg);
   background-size: cover;
   background-repeat: no-repeat;

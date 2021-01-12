@@ -11,6 +11,8 @@ export class TeamComponent implements OnInit {
   boats: Boat[] = [
     new Boat('1', 'New Zealand', 'Not Sure', 'A image path'),
     new Boat('2', 'Italy', 'Luna Rosa', 'another test string'),
+    new Boat('3', 'UK', 'Rita', 'A image path'),
+    new Boat('4', 'USA', 'American Dream', 'another test string'),
   ];
 
   displayBoat: Boat;

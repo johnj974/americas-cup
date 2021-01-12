@@ -1,12 +1,13 @@
-<p>team works!</p>
-<!-- <div *ngFor="let boat of boats">
-  <p>{{ boat.id }}</p>
-  <p>{{ boat.country }}</p>
-  <p>{{ boat.name }}</p>
-  <p>{{ boat.imagePath }}</p>
-</div> -->
-<div>
-  <p>{{ displayBoat.country }}</p>
-  <p>{{ displayBoat.name }}</p>
-  <p>{{ displayBoat.imagePath }}</p>
-</div>
+<section id="team">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <img src="{{ displayBoat.imagePath }}" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md-3">
+        <p>{{ displayBoat.country }}</p>
+        <p>{{ displayBoat.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>

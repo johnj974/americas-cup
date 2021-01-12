@@ -9,10 +9,15 @@ import { Boat } from '../models/boat.model';
 })
 export class TeamComponent implements OnInit {
   boats: Boat[] = [
-    new Boat('1', 'New Zealand', 'Not Sure', 'A image path'),
-    new Boat('2', 'Italy', 'Luna Rosa', 'another test string'),
-    new Boat('3', 'UK', 'Rita', 'A image path'),
-    new Boat('4', 'USA', 'American Dream', 'another test string'),
+    new Boat(
+      '1',
+      'New Zealand',
+      'Te Rehutai',
+      'assets/images/new-zealand-boat2.jpg'
+    ),
+    new Boat('2', 'Italy', 'Luna Rosa', 'assets/images/italy3-boat.jpg'),
+    new Boat('3', 'UK', 'Rita', 'assets/images/uk-boat.jpg'),
+    new Boat('4', 'USA', 'American Dream', 'assets/images/american-boat.jpg'),
   ];
 
   displayBoat: Boat;

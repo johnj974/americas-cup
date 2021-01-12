@@ -10,7 +10,7 @@ import { TeamsComponent } from './teams/teams.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'teams', component: TeamsComponent },
-  { path: 'teams/:id', component: TeamComponent },
+  { path: 'teams/:id/:name', component: TeamComponent },
   { path: 'news', component: NewsComponent },
   { path: 'competition', component: CompetitionComponent },
   { path: 'not-found', component: PageNotFoundComponent },

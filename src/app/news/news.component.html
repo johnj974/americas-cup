@@ -1,9 +1,21 @@
 <section id="news">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <i class="fa fa-2x fa-rss"></i>
+      <div class="card-group">
+        <div class="col py-3" *ngFor="let news of newsList">
+          <div class="card" style="width: 18rem">
+            <img [src]="news.image" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ news.title }}</h5>
+              <p class="card-text">
+                {{ news.text }}
+              </p>
+              <small>{{ news.author }}</small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+

@@ -15,7 +15,7 @@ export class TeamComponent implements OnInit {
       'Te Rehutai',
       'assets/images/new-zealand-boat2.jpg'
     ),
-    new Boat('2', 'Italy', 'Luna Rosa', 'assets/images/italy3-boat.jpg'),
+    new Boat('2', 'Italy', 'Luna Rossa', 'assets/images/italy3-boat.jpg'),
     new Boat('3', 'UK', 'Rita', 'assets/images/uk-boat.jpg'),
     new Boat('4', 'USA', 'American Dream', 'assets/images/american-boat.jpg'),
   ];

@@ -1,12 +1,12 @@
 <section id="team">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-9">
-        <img src="{{ displayBoat.imagePath }}" class="img-fluid" alt="" />
+      <div class="col-md-9 p-0 rowboat">
+        <img [src]="displayBoat.imagePath" class="img-fluid" alt="" />
       </div>
-      <div class="col-md-3">
-        <p>{{ displayBoat.country }}</p>
-        <p>{{ displayBoat.name }}</p>
+      <div class="col-md-3 bg-dark text-white">
+        <p>Country: {{ displayBoat.country }}</p>
+        <p>Boat Name: {{ displayBoat.name }}</p>
       </div>
     </div>
   </div>

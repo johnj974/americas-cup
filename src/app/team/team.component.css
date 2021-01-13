@@ -1,0 +1,13 @@
+.rowboat {
+  height: 70vh;
+}
+
+.img-fluid {
+  height: inherit;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    height: auto;
+  }
+}

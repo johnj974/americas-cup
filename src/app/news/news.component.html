@@ -5,16 +5,30 @@
         <div
           class="col-lg-4 col-sm-6 py-3"
           align="center"
-          *ngFor="let news of newsList"
+          *ngFor="let news of newsList; let i = index"
         >
           <div class="card">
             <img [src]="news.image" class="card-img-top" alt="..." />
+            <div
+              class="card-header"
+              [class]="
+                i % 2 != 0 ? 'bg-dark text-white' : 'bg-danger text-white'
+              "
+            >
+              {{ news.title }}
+            </div>
             <div class="card-body">
-              <h5 class="card-title">{{ news.title }}</h5>
               <p class="card-text">
                 {{ news.text }}
               </p>
-              <small>{{ news.author }}</small>
+            </div>
+            <div
+              class="card-footer"
+              [class]="
+                i % 2 == 0 ? 'bg-dark text-white' : 'bg-danger text-white'
+              "
+            >
+              {{ news.author }}
             </div>
           </div>
         </div>

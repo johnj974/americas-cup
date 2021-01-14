@@ -9,12 +9,7 @@
         >
           <div class="card">
             <img [src]="news.image" class="card-img-top" alt="..." />
-            <div
-              class="card-header"
-              [class]="
-                i % 2 != 0 ? 'bg-dark text-white' : 'bg-danger text-white'
-              "
-            >
+            <div class="card-header">
               {{ news.title }}
             </div>
             <div class="card-body">

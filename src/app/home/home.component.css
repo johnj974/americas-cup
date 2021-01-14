@@ -27,7 +27,10 @@
 
 .b {
   grid-area: 5 / 1 / 9 / 7;
-  background-color: grey;
+  background-image: url(../../assets/images/launch2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 1;
 }
 .b-main {
@@ -37,7 +40,10 @@
 
 .c {
   grid-area: 8 / 3 / 12 / 11;
-  background-color: hotpink;
+  background-image: url(../../assets/images/trophy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 2;
 }
 .c-main {
@@ -46,27 +52,33 @@
 }
 
 .d {
-  grid-area: 11 / 2 / 16 / 8;
-  background-color: lawngreen;
+  grid-area: 11 / 2 / 16 / 9;
+  background-image: url(../../assets/images/uk-boat2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .d-main {
   grid-area: 13 / 8 / 15 / 12;
 }
 
 .e {
-  grid-area: 15 / 3 / 19 / 12;
-  background-color: blue;
+  grid-area: 15 / 4 / 20 / 12;
+  background-image: url(../../assets/images/launch.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .e-main {
   grid-area: 17 / 1 / 18 / 5;
 }
 
 .f {
-  grid-area: 18 / 1 / 26 / 11;
+  grid-area: 19 / 1 / 26 / 11;
   background-image: url(../../assets/images/italy3-boat.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 .f-main {
   grid-area: 20 / 9 / 22 / 12;
@@ -91,6 +103,7 @@
   }
   .d {
     grid-area: 13 / 1 / 17 / 13;
+    background-position: center;
   }
   .e {
     grid-area: 17 / 1 / 21 / 13;

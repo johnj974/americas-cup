@@ -1,6 +1,10 @@
 .card {
   height: 40vh;
-  /* border: 5px solid rgb(214, 33, 33); */
+  width: 18rem;
+}
+
+.card img {
+  height: 20vh;
 }
 
 #news {

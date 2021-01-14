@@ -1,9 +1,13 @@
 <section id="news">
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row mx-auto">
       <div class="card-group">
-        <div class="col py-3" *ngFor="let news of newsList">
-          <div class="card" style="width: 18rem">
+        <div
+          class="col-lg-4 col-sm-6 py-3"
+          align="center"
+          *ngFor="let news of newsList"
+        >
+          <div class="card">
             <img [src]="news.image" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ news.title }}</h5>
@@ -18,4 +22,3 @@
     </div>
   </div>
 </section>
-

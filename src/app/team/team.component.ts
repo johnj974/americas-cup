@@ -13,11 +13,30 @@ export class TeamComponent implements OnInit {
       '1',
       'New Zealand',
       'Te Rehutai',
+      'aaaaa',
+      'bb',
+      'cc',
       'assets/images/new-zealand-boat2.jpg'
     ),
-    new Boat('2', 'Italy', 'Luna Rossa', 'assets/images/italy3-boat.jpg'),
-    new Boat('3', 'UK', 'Rita', 'assets/images/uk-boat.jpg'),
-    new Boat('4', 'USA', 'American Dream', 'assets/images/american-boat.jpg'),
+    new Boat(
+      '2',
+      'Italy',
+      'Luna Rossa',
+      'aa',
+      'bb',
+      'cc',
+      'assets/images/italy3-boat.jpg'
+    ),
+    new Boat('3', 'UK', 'Rita', 'aa', 'bb', 'cc', 'assets/images/uk-boat.jpg'),
+    new Boat(
+      '4',
+      'USA',
+      'American Dream',
+      'aa',
+      'bb',
+      'cc',
+      'assets/images/american-boat.jpg'
+    ),
   ];
 
   displayBoat: Boat;

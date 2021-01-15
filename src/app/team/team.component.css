@@ -14,3 +14,11 @@
     height: auto;
   }
 }
+
+.flag {
+  background-image: url(../../assets/images/italyFlag.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+}

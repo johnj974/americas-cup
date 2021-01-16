@@ -16,7 +16,8 @@ export class TeamComponent implements OnInit {
       'aaaaa',
       'bb',
       'cc',
-      'assets/images/new-zealand-boat2.jpg'
+      'assets/images/new-zealand-boat2.jpg',
+      'assets/images/nz-flag.gif'
     ),
     new Boat(
       '2',
@@ -25,9 +26,19 @@ export class TeamComponent implements OnInit {
       'aa',
       'bb',
       'cc',
-      'assets/images/italy3-boat.jpg'
+      'assets/images/italy3-boat.jpg',
+      'assets/images/italyFlag.gif'
     ),
-    new Boat('3', 'UK', 'Rita', 'aa', 'bb', 'cc', 'assets/images/uk-boat.jpg'),
+    new Boat(
+      '3',
+      'UK',
+      'Rita',
+      'aa',
+      'bb',
+      'cc',
+      'assets/images/uk-boat.jpg',
+      'assets/images/uk-flag.gif'
+    ),
     new Boat(
       '4',
       'USA',
@@ -35,7 +46,8 @@ export class TeamComponent implements OnInit {
       'aa',
       'bb',
       'cc',
-      'assets/images/american-boat.jpg'
+      'assets/images/american-boat.jpg',
+      'assets/images/us-flag.gif'
     ),
   ];
 

@@ -1,5 +1,5 @@
 .rowboat {
-  height: 70vh;
+  height: 65vh;
 }
 
 .img-fluid {
@@ -16,7 +16,7 @@
 }
 
 .flag {
-  background-image: url(../../assets/images/italyFlag.gif);
+  /* background-image: url(../../assets/images/italyFlag.gif); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

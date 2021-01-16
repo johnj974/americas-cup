@@ -6,6 +6,7 @@ export class Boat {
   public helmsman: string;
   public sponsors: string;
   public imagePath: string;
+  public flag: string;
 
   constructor(
     id: string,
@@ -14,7 +15,8 @@ export class Boat {
     skipper: string,
     helmsman: string,
     sponsors: string,
-    imagePath: string
+    imagePath: string,
+    flag: string,
   ) {
     this.id = id;
     this.country = country;
@@ -23,5 +25,6 @@ export class Boat {
     this.helmsman = helmsman;
     this.sponsors = sponsors;
     this.imagePath = imagePath;
+    this.flag = flag;
   }
 }

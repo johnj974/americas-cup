@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { TeamsComponent } from './teams/teams.component';
+// import { TeamsComponent } from './teams/teams.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { NewsComponent } from './news/news.component';
@@ -20,7 +20,7 @@ import { ClockComponent } from './clock/clock.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    TeamsComponent,
+    // TeamsComponent,
     PageNotFoundComponent,
     // NewsComponent,
     CompetitionComponent,

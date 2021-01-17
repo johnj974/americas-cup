@@ -9,7 +9,7 @@ import { TeamsComponent } from './teams/teams.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'teams', component: TeamsComponent },
+  { path: 'teams', loadChildren:()=>import("./teams/teams.module").then((m)=>m.TeamsModule) },
   { path: 'teams/:id/:name', component: TeamComponent },
   {
     path: 'news',

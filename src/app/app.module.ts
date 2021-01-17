@@ -7,12 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { TeamsComponent } from './teams/teams.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NewsComponent } from './news/news.component';
+// import { NewsComponent } from './news/news.component';
 import { CompetitionComponent } from './competition/competition.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { TeamComponent } from './team/team.component';
 import { ClockComponent } from './clock/clock.component';
+// import { NewsModule } from './news/news/news.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ClockComponent } from './clock/clock.component';
     HomeComponent,
     TeamsComponent,
     PageNotFoundComponent,
-    NewsComponent,
+    // NewsComponent,
     CompetitionComponent,
     FooterComponent,
     TeamComponent,

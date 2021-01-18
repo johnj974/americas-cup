@@ -9,8 +9,15 @@ import { TeamsComponent } from './teams/teams.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'teams', loadChildren:()=>import("./teams/teams.module").then((m)=>m.TeamsModule) },
-  { path: 'teams/:id/:name', component: TeamComponent },
+  {
+    path: 'teams',
+    loadChildren: () =>
+      import('./teams/teams.module').then((m) => m.TeamsModule),
+  },
+  {
+    path: 'teams/:id/:name',
+    loadChildren: () => import('./team/team.module').then((m) => m.TeamModule),
+  },
   {
     path: 'news',
     loadChildren: () =>

@@ -25,7 +25,7 @@ import { ClockComponent } from './clock/clock.component';
     // NewsComponent,
     CompetitionComponent,
     FooterComponent,
-    TeamComponent,
+    // TeamComponent,
     ClockComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

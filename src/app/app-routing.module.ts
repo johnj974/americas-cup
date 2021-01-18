@@ -20,8 +20,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'news',
-    loadChildren: () =>
-      import('./news/news/news.module').then((m) => m.NewsModule),
+    loadChildren: () => import('./news/news.module').then((m) => m.NewsModule),
   },
   { path: 'competition', component: CompetitionComponent },
   { path: 'not-found', component: PageNotFoundComponent },

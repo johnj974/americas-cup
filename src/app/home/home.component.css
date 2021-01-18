@@ -20,6 +20,7 @@
 }
 .a-main {
   grid-area: 2 / 2 / 3 / 5;
+  color: white;
 }
 .a-text {
   grid-area: 3 / 3 / 5 / 6;
@@ -34,8 +35,9 @@
   z-index: 1;
 }
 .b-main {
-  grid-area: 7 / 6 / 9 / 10;
+  grid-area: 7 / 7 / 9 / 11;
   z-index: 2;
+  color: white;
 }
 
 .c {
@@ -49,6 +51,7 @@
 .c-main {
   grid-area: 10 / 2 / 12 / 5;
   z-index: 3;
+  color: white;
 }
 
 .d {
@@ -59,7 +62,8 @@
   background-position: right;
 }
 .d-main {
-  grid-area: 13 / 8 / 15 / 12;
+  grid-area: 13 / 9 / 15 / 13;
+  color: white;
 }
 
 .e {
@@ -70,7 +74,8 @@
   background-position: top;
 }
 .e-main {
-  grid-area: 17 / 1 / 18 / 5;
+  grid-area: 17 / 3 / 18 / 7;
+  color: white;
 }
 
 .f {
@@ -81,7 +86,8 @@
   background-position: bottom;
 }
 .f-main {
-  grid-area: 20 / 9 / 22 / 12;
+  grid-area: 21 / 10 / 23 / 13;
+  color: white;
 }
 
 /* media query */

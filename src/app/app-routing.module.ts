@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CompetitionComponent } from './competition/competition.component';
+
 import { HomeComponent } from './home/home.component';
-// import { NewsComponent } from './news/news.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { TeamComponent } from './team/team.component';
-import { TeamsComponent } from './teams/teams.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +19,13 @@ const appRoutes: Routes = [
     path: 'news',
     loadChildren: () => import('./news/news.module').then((m) => m.NewsModule),
   },
-  { path: 'competition', component: CompetitionComponent },
+  {
+    path: 'competition',
+    loadChildren: () =>
+      import('./competition/competition.module').then(
+        (m) => m.CompetitionModule
+      ),
+  },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found', pathMatch: 'full' },
 ];

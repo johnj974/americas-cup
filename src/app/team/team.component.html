@@ -1,7 +1,8 @@
 <section id="team">
-  <div class="container-fluid">
+  <app-header>{{ displayBoat.name }}</app-header>
+  <div class="container-fluid pt-3 bg-dark">
     <div class="row">
-      <div class="col-md-7 p-0 bg-dark rowboat">
+      <div class="col-md-7 p-0 rowboat">
         <img [src]="displayBoat.imagePath" class="img-fluid" alt="" />
       </div>
       <div class="col-md-5 bg-dark text-white">

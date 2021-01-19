@@ -42,7 +42,7 @@ export class TeamComponent implements OnInit {
     new Boat(
       '4',
       'USA',
-      'American Dream',
+      'Patriot',
       'aa',
       'bb',
       'cc',

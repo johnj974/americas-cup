@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClockComponent } from './clock/clock.component';
@@ -14,7 +13,6 @@ import { ClockComponent } from './clock/clock.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    //HomeComponent,
     PageNotFoundComponent,
     FooterComponent,
     ClockComponent,

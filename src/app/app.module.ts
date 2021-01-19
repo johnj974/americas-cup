@@ -14,7 +14,7 @@ import { ClockComponent } from './clock/clock.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
+    //HomeComponent,
     PageNotFoundComponent,
     FooterComponent,
     ClockComponent,

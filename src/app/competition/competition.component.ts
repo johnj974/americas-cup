@@ -13,6 +13,8 @@ export class CompetitionComponent implements OnInit {
 
   loadedPosts = [];
 
+  displayMessage: boolean = false;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -20,6 +22,7 @@ export class CompetitionComponent implements OnInit {
   }
 
   onSaveForm(entryForm: NgForm) {
+    this.displayMessage = true;
     let postData = entryForm.value;
     this.http
       .post(

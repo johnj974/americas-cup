@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
-import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { ClockComponent } from './clock/clock.component';
     NavbarComponent,
     PageNotFoundComponent,
     FooterComponent,
-    ClockComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -2,10 +2,17 @@
   <app-header>Competition</app-header>
   <div class="container-fluid bg-dark">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="row">
           <img
             src="https://americascup-2021.s3.amazonaws.com/images/m157_crop169014_1024x576_proportional_1534495960141A.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="row">
+          <img
+            src="https://e0.365dm.com/20/11/2048x1152/skysports-americas-cup-sailing_5189913.jpg"
             alt=""
             class="img-fluid"
           />
@@ -99,7 +106,7 @@
             <textarea
               name="message"
               class="form-control bg-contrast"
-              placeholder="Why will your team win?"
+              placeholder="Feel free to leave a message"
               rows="5"
               ngModel
             ></textarea>
@@ -119,6 +126,29 @@
         <!-- add area to show percentage votes for teams -->
         <div *ngFor="let post of loadedPosts">
           <p>{{ post.winnerChoice }}</p>
+        </div>
+      </div>
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="row">
+          <img
+            src="https://americascup-2021.s3.amazonaws.com/images/m157_crop169014_1024x576_proportional_1534495960141A.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="row">
+          <img
+            src="https://e0.365dm.com/20/11/2048x1152/skysports-americas-cup-sailing_5189913.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="row">
+          <img
+            src="https://e0.365dm.com/20/11/2048x1152/skysports-americas-cup-sailing_5189913.jpg"
+            alt=""
+            class="img-fluid"
+          />
         </div>
       </div>
     </div>

@@ -50,18 +50,7 @@ export class CompetitionComponent implements OnInit {
       )
       .subscribe((posts) => {
         this.loadedPosts = posts;
+        console.log(this.loadedPosts);
       });
   }
-
-  // onCreatePost(entryForm: NgForm) {
-  //   let postData = entryForm.value;
-  //   this.http
-  //     .post(
-  //       'https://americas-cup-6026a-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
-  //       postData
-  //     )
-  //     .subscribe((responseData) => {
-  //       console.log(responseData);
-  //     });
-  // }
 }

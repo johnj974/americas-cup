@@ -5,13 +5,25 @@
       <div class="col-md-7 p-0 rowboat">
         <img [src]="displayBoat.imagePath" class="img-fluid" alt="" />
       </div>
-      <div class="col-md-5 bg-dark text-white">
-        <p>Country: {{ displayBoat.country }}</p>
-        <p>Boat Name: {{ displayBoat.name }}</p>
-        <p>Official Name:</p>
-        <p>Skipper:</p>
-        <p>Helmsman:</p>
-        <p>Sponsors:</p>
+      <div class="col-md-5 bg-dark text-white text-center">
+        <p class="country">
+          Country: <span>{{ displayBoat.country }}</span>
+        </p>
+        <p>
+          Boat Name: <span>{{ displayBoat.name }}</span>
+        </p>
+        <p>
+          Official Name: <span>{{ displayBoat.officialName }}</span>
+        </p>
+        <p>
+          Skipper: <span>{{ displayBoat.skipper }}</span>
+        </p>
+        <p>
+          Helmsman: <span>{{ displayBoat.helmsman }}</span>
+        </p>
+        <p>
+          Sponsors: <span>{{ displayBoat.sponsors }}</span>
+        </p>
       </div>
     </div>
     <div class="row bg-dark py-2">

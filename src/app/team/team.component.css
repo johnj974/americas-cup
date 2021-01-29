@@ -2,8 +2,20 @@
   height: 65vh;
 }
 
+p {
+  color: red;
+}
+span {
+  color: white;
+}
+
 .img-fluid {
   height: inherit;
+}
+
+.country {
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 
 @media (max-width: 768px) {

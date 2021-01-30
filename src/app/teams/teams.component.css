@@ -29,3 +29,24 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@keyframes anchors {
+  from {
+    color: gray;
+  }
+  to {
+    color: red;
+    font-size: 20px;
+  }
+}
+
+a {
+  animation-name: anchors;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}

@@ -22,15 +22,18 @@
           Helmsman: <span>{{ displayBoat.helmsman }}</span>
         </p>
         <p>
-          Sponsors: <span>{{ displayBoat.sponsors }}</span>
+          Main Sponsors: <span>{{ displayBoat.sponsors }}</span>
         </p>
+        <div class="mx-auto">
+          <img [src]="displayBoat.flag" alt="flag" class="flag pt-3" />
+        </div>
       </div>
     </div>
     <div class="row bg-dark py-2">
       <div class="col-md-6 col-md-offset" align="center">
-        <div class="mx-auto">
+        <!-- <div class="mx-auto">
           <img [src]="displayBoat.flag" alt="flag" class="flag" />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

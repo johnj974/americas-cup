@@ -1,7 +1,11 @@
 footer {
-  border-top: 3px solid red;
+  border-top: 3px solid #ff0000;
 }
 
 ul li a {
-  color: white;
+  color: #fff;
+}
+
+.base-footer {
+  height: 120px;
 }

@@ -3,11 +3,11 @@
 }
 
 p {
-  color: red;
+  color: #ff0000;
   font-size: 20px;
 }
 span {
-  color: white;
+  color: #ffffff;
 }
 
 .img-fluid {
@@ -16,7 +16,7 @@ span {
 
 .country {
   text-decoration: underline;
-  text-decoration-color: red;
+  text-decoration-color: #ff0000;
 }
 
 @media (max-width: 1024px) {

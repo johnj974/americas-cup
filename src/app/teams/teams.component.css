@@ -30,23 +30,13 @@
   background-position: center;
 }
 
-@keyframes anchors {
-  from {
-    color: gray;
-  }
-  to {
-    color: red;
-    font-size: 20px;
-  }
-}
-
 a {
-  animation-name: anchors;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
+  color: #777373;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 a:hover {
-  color: gray;
-  text-decoration: none;
+  color: #ff0000;
+  border-bottom: 1px solid #ff0000;
 }

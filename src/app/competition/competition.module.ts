@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { CompetitionRoutingModule } from './competion-routing.module';
 import { CompetitionComponent } from './competition.component';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [CompetitionComponent],
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     CompetitionRoutingModule,
     FormsModule,
     SharedModule,
-    HttpClientModule,
+    // HttpClientModule,
   ],
   exports: [CompetitionComponent],
 })

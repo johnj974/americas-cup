@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { map } from 'rxjs/operators';
+import { CompetitionService } from '../services/competition.service';
 
 @Component({
   selector: 'app-competition',
@@ -9,13 +9,16 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./competition.component.css'],
 })
 export class CompetitionComponent implements OnInit {
-  winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'England'];
+  winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'UK'];
 
   loadedPosts = [];
 
   displayMessage: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private competitionService: CompetitionService
+  ) {}
 
   ngOnInit(): void {
     this.fetchPosts();
@@ -24,36 +27,14 @@ export class CompetitionComponent implements OnInit {
   onSaveForm(entryForm: NgForm) {
     this.displayMessage = true;
     let postData = entryForm.value;
-    this.http
-      .post(
-        'https://americas-cup-6026a-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
-        postData
-      )
-      .subscribe((responseData) => {
-        console.log(responseData);
-      });
+    this.competitionService.postPosts(postData);
   }
 
   // this function called in ngOnInit so that info is available immediately
   private fetchPosts() {
-    this.http
-      .get(
-        'https://americas-cup-6026a-default-rtdb.europe-west1.firebasedatabase.app/posts.json'
-      )
-      .pipe(
-        map((responseData) => {
-          const postsArray = [];
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              postsArray.push({ ...responseData[key], id: key });
-            }
-          }
-          return postsArray;
-        })
-      )
-      .subscribe((posts) => {
-        this.loadedPosts = posts;
-        console.log(this.loadedPosts);
-      });
+    this.competitionService.retrievePosts().subscribe((posts) => {
+      this.loadedPosts = posts;
+      console.log(this.loadedPosts);
+    });
   }
 }

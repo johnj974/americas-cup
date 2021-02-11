@@ -88,3 +88,9 @@
     grid-area: 21 / 1 / 25 / 13;
   }
 }
+
+/* @media only screen and (max-width: 767px) {
+  .shrink-me {
+    font-size: 16px;
+  }
+} */

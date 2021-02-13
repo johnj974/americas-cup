@@ -1,7 +1,56 @@
 <section id="news">
   <app-header>News</app-header>
-  <div *ngFor="let elem of covidInfo">
-    <p>{{ elem.country }}</p>
+
+  <div class="container-fluid bg-dark text-white text-center">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let elem of covidInfo">
+        <h5>Covid 19 Info</h5>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Population</th>
+              <td>{{ elem.population }}</td>
+            </tr>
+            <tr>
+              <th>Active Cases</th>
+              <td>{{ elem.active }}</td>
+            </tr>
+            <tr>
+              <th>Todays Cases</th>
+              <td>{{ elem.todayCases }}</td>
+            </tr>
+            <tr>
+              <th>Todays Recovered</th>
+              <td>{{ elem.todayRecovered }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">tide/race results</div>
+      <div class="col-lg-4">
+        <h5>Competition Votes</h5>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>New Zealand</th>
+              <td>{{ nz }}</td>
+            </tr>
+            <tr>
+              <th>UK</th>
+              <td>{{ uk }}</td>
+            </tr>
+            <tr>
+              <th>Italy</th>
+              <td>{{ italy }}</td>
+            </tr>
+            <tr>
+              <th>USA</th>
+              <td>{{ usa }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <div class="container-fluid bg-dark">
     <div class="row mx-auto justify-content-center">

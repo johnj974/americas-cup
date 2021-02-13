@@ -7,6 +7,11 @@
   height: 20vh;
 }
 
+.table td,
+.table th {
+  border: none;
+  color: #fff;
+}
 /* #news {
   background-color: darkgrey;
 } */

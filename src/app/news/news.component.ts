@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NewsCard } from '../models/newscard.model';
 import { CovidService } from '../services/covid.service';
 import { CovidReport } from '../models/covidReport';
-import { map } from 'rxjs/operators';
+import { CompetitionService } from '../services/competition.service';
 
 @Component({
   selector: 'app-news',
@@ -10,50 +10,36 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
-  covidInfo: CovidReport[];
+  covidInfo: CovidReport[] = [];
+  covidCountry: string;
 
-  constructor(private covidService: CovidService) {}
+  compResults = [];
+
+  constructor(
+    private covidService: CovidService,
+    private competitionService: CompetitionService
+  ) {}
 
   ngOnInit(): void {
-    // this.getReports();
     this.getReport();
+    this.fetchResults();
   }
 
   getReport() {
-    this.covidService
-      .getCovidInfo()
-      .pipe(
-        map((data: CovidReport) => {
-          const responseArray = [];
-          for (const key in data) {
-            responseArray.push(...data[key]);
-          }
-          return responseArray;
-        })
-      )
-      .subscribe((data) => {
-        this.covidInfo = data;
-      });
+    this.covidService.getCovidInfo().subscribe((data) => {
+      console.log(data);
+      this.covidCountry = data.country;
+      this.covidInfo.push(data);
+      console.log(this.covidInfo);
+    });
   }
 
-  // public getReports() {
-  //   this.covidService
-  //     .getCovidInfo()
-  //     .pipe(
-  //       map((data: CovidReport) => {
-  //         const responseArray = [];
-  //         for (const key in data) {
-  //           responseArray.push(...data[key]);
-  //         }
-  //         return responseArray;
-  //       })
-  //     )
-  //     .subscribe((data) => {
-  //       this.covidInfo = data;
-  //       // this.covidInfo.push(receivedData);
-  //       console.log(this.covidInfo);
-  //     });
-  // }
+  private fetchResults() {
+    this.competitionService.retrievePosts().subscribe((posts) => {
+      this.compResults = posts;
+      console.log(this.compResults);
+    });
+  }
 
   newsList: NewsCard[] = [
     new NewsCard(

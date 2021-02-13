@@ -11,8 +11,6 @@ import { CompetitionService } from '../services/competition.service';
 export class CompetitionComponent implements OnInit {
   winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'UK'];
 
-  loadedPosts = [];
-
   displayMessage: boolean = false;
 
   constructor(
@@ -20,21 +18,11 @@ export class CompetitionComponent implements OnInit {
     private competitionService: CompetitionService
   ) {}
 
-  ngOnInit(): void {
-    this.fetchPosts();
-  }
+  ngOnInit(): void {}
 
   onSaveForm(entryForm: NgForm) {
     this.displayMessage = true;
     let postData = entryForm.value;
     this.competitionService.postPosts(postData);
-  }
-
-  // this function called in ngOnInit so that info is available immediately
-  private fetchPosts() {
-    this.competitionService.retrievePosts().subscribe((posts) => {
-      this.loadedPosts = posts;
-      console.log(this.loadedPosts);
-    });
   }
 }

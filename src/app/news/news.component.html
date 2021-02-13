@@ -1,7 +1,7 @@
 <section id="news">
   <app-header>News</app-header>
 
-  <div class="container-fluid bg-dark text-white text-center">
+  <div class="container-fluid bg-dark text-white http-section">
     <div class="row">
       <div class="col-lg-4" *ngFor="let elem of covidInfo">
         <h5>Covid 19 Info</h5>
@@ -26,7 +26,10 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-4">tide/race results</div>
+      <div class="col-lg-4">
+        <h5>tide/local time</h5>
+        <p>https://api.tidesandcurrents.noaa.gov/api/prod/</p>
+      </div>
       <div class="col-lg-4">
         <h5>Competition Votes</h5>
         <table class="table">
@@ -52,7 +55,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid bg-dark">
+  <div class="container-fluid bg-dark card-section">
     <div class="row mx-auto justify-content-center">
       <div class="card-group">
         <div

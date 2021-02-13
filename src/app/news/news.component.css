@@ -1,17 +1,44 @@
-.card {
-  height: 45vh;
-  width: 18rem;
-}
-
-.card img {
-  height: 20vh;
+.http-section {
+  border-bottom: 3px solid #ff0000;
 }
 
 .table td,
 .table th {
   border: none;
   color: #fff;
+  padding: 3px 30px;
 }
+
+h5 {
+  text-align: center;
+  border-bottom: 1px solid white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+table.td {
+  text-align: right;
+}
+
+.card-section {
+  padding: 15px;
+}
+
+.card {
+  height: 45vh;
+  width: 18rem;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px white;
+}
+
+.card img {
+  height: 20vh;
+}
+
 /* #news {
   background-color: darkgrey;
 } */

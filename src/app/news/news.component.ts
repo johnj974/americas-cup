@@ -3,6 +3,7 @@ import { NewsCard } from '../models/newscard.model';
 import { CovidService } from '../services/covid.service';
 import { CovidReport } from '../models/covidReport';
 import { CompetitionService } from '../services/competition.service';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-news',
@@ -12,6 +13,7 @@ import { CompetitionService } from '../services/competition.service';
 export class NewsComponent implements OnInit {
   covidInfo = [];
   covidCountry: string;
+  weatherData = [];
 
   compResults = [];
   italy = 0;
@@ -21,27 +23,35 @@ export class NewsComponent implements OnInit {
 
   constructor(
     private covidService: CovidService,
-    private competitionService: CompetitionService
+    private competitionService: CompetitionService,
+    private weatherService: WeatherService
   ) {}
 
   ngOnInit(): void {
-    this.getReport();
+    this.getCovidReport();
     this.fetchResults();
+    this.getWeatherReport();
   }
 
-  getReport() {
+  getCovidReport() {
     this.covidService.getCovidInfo().subscribe((data) => {
-      console.log(data);
       this.covidCountry = data.country;
       this.covidInfo.push(data);
-      console.log(this.covidInfo);
+      // console.log(this.covidInfo);
+    });
+  }
+
+  getWeatherReport() {
+    this.weatherService.getWeather().subscribe((data) => {
+      this.weatherData.push(data);
+      console.log(this.weatherData);
     });
   }
 
   private fetchResults() {
     this.competitionService.retrievePosts().subscribe((posts) => {
       this.compResults = posts;
-      console.log(this.compResults);
+      //console.log(this.compResults);
       for (let i = 0; i < this.compResults.length; i++) {
         if (this.compResults[i].winnerChoice === 'Italy') {
           this.italy += 1;

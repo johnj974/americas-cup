@@ -26,9 +26,28 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-4">
-        <h5>tide/local time</h5>
-        <p>https://api.tidesandcurrents.noaa.gov/api/prod/</p>
+      <div class="col-lg-4" *ngFor="let weather of weatherData">
+        <h5>Auckland Weather</h5>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Temperature</th>
+              <td>{{ weather.main.temp }}</td>
+            </tr>
+            <tr>
+              <th>Conditions</th>
+              <td>{{ weather.weather[0].main }}</td>
+            </tr>
+            <tr>
+              <th>Wind Speed</th>
+              <td>{{ weather.wind.speed }}</td>
+            </tr>
+            <tr>
+              <th>Wind Direction</th>
+              <td>{{ weather.wind.deg }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="col-lg-4">
         <h5>Competition Votes</h5>

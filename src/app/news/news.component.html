@@ -3,7 +3,7 @@
 
   <div class="container-fluid bg-dark text-white http-section">
     <div class="row">
-      <div class="col-lg-4" *ngFor="let elem of covidInfo">
+      <div class="col-lg-4 pb-3" *ngFor="let elem of covidInfo">
         <h5>Covid 19 Info</h5>
         <table class="table">
           <tbody>
@@ -26,7 +26,7 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-4" *ngFor="let weather of weatherData">
+      <div class="col-lg-4 pb-3" *ngFor="let weather of weatherData">
         <h5>Auckland Weather</h5>
         <table class="table">
           <tbody>
@@ -49,7 +49,7 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 pb-3">
         <h5>Competition Votes</h5>
         <table class="table">
           <tbody>
@@ -74,7 +74,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid bg-dark card-section">
+  <div class="container-fluid bg-dark card-section py-5">
     <div class="row mx-auto justify-content-center">
       <div class="card-group">
         <div
@@ -85,7 +85,7 @@
           <div class="card">
             <img [src]="news.image" class="card-img-top" alt="..." />
             <div class="card-header">
-              {{ news.title }}
+              <h4>{{ news.title }}</h4>
             </div>
             <div class="card-body">
               <p class="card-text">
@@ -98,7 +98,7 @@
                 i % 2 == 0 ? 'bg-dark text-white' : 'bg-danger text-white'
               "
             >
-              {{ news.author }}
+              <p class="muted pb-0 mb-0 text-end">{{ news.author }}</p>
             </div>
           </div>
         </div>

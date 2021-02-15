@@ -6,7 +6,7 @@
 .table th {
   border: none;
   color: #fff;
-  padding: 3px 30px;
+  padding: 10px 30px 0px 30px;
 }
 
 h5 {
@@ -37,6 +37,15 @@ table.td {
 
 .card img {
   height: 20vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    height: 450px;
+  }
+  .card img {
+    height: 200px;
+  }
 }
 
 /* #news {

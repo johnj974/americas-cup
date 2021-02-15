@@ -39,7 +39,7 @@ export class TeamComponent implements OnInit {
       'Ben Ainslie',
       'Ben Ainslie',
       'Ineos',
-      'assets/images/uk-boat.jpg',
+      'assets/images/uk-boat3.jpg',
       'assets/images/uk-flag.gif'
     ),
     new Boat(

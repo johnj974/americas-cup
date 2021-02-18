@@ -1,5 +1,6 @@
 .row {
   height: 50vh;
+  position: relative;
 }
 
 .team1 {
@@ -34,9 +35,14 @@ a {
   color: #777373;
   font-weight: 600;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: 0.5s;
 }
 
 a:hover {
   color: #ff0000;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 2px solid #ff0000;
+  border-left: 2px solid #ff0000;
+  /* background-color: #ff0000; */
 }

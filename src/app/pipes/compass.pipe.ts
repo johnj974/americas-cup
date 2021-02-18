@@ -23,8 +23,8 @@ export class CompassPipe implements PipeTransform {
       'North West',
       'North North West',
     ];
-    const arrayPosition = value % 16;
-    console.log(value);
+    const rawPosition = Math.floor(value / 22.5 + 0.5);
+    const arrayPosition = rawPosition % 16;
     return compassPoints[arrayPosition];
   }
 }

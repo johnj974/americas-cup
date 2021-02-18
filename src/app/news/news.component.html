@@ -32,7 +32,7 @@
           <tbody>
             <tr>
               <th>Temperature</th>
-              <td>{{ weather.main.temp }}</td>
+              <td>{{ weather.main.temp | number: "1.0-0" }} &#8451;</td>
             </tr>
             <tr>
               <th>Conditions</th>
@@ -40,7 +40,7 @@
             </tr>
             <tr>
               <th>Wind Speed</th>
-              <td>{{ weather.wind.speed }}</td>
+              <td>{{ weather.wind.speed | convert }} km/h</td>
             </tr>
             <tr>
               <th>Wind Direction</th>

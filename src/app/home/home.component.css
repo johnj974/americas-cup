@@ -69,7 +69,7 @@
 /* media query */
 @media (max-width: 600px) {
   #grid-area {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 }

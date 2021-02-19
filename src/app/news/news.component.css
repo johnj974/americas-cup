@@ -21,7 +21,11 @@ table.td {
 }
 
 .card-section {
-  padding: 15px;
+  padding: 20px 0;
+}
+
+#card-row {
+  width: 80%;
 }
 
 .card {

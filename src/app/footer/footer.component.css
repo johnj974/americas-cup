@@ -12,3 +12,9 @@ ul li a {
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (max-width: 768px) {
+  .footer-paragraph {
+    padding-bottom: 15px;
+  }
+}

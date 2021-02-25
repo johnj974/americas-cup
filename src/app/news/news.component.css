@@ -6,7 +6,7 @@
 .table th {
   border: none;
   color: #fff;
-  padding: 10px 30px 0px 30px;
+  padding: 10px 10px 0px 45px;
 }
 
 h5 {
@@ -43,12 +43,23 @@ table.td {
   height: 20vh;
 }
 
+@media only screen and (max-width: 768px) {
+  .table td,
+  .table th {
+    padding: 10px 10px 0px 75px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .card {
     height: 450px;
   }
   .card img {
     height: 200px;
+  }
+  .tabel td,
+  .table th {
+    padding: 10px 10px 0px 35px;
   }
 }
 

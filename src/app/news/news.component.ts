@@ -91,13 +91,13 @@ export class NewsComponent implements OnInit {
     new NewsCard(
       'assets/images/italy2-boat.jpg',
       'Italian Masterclass',
-      'Prada Pirelli Lunna Rosa take a commanding for nil lead in the Prada Cup final to maintain their charge for a final spot.',
+      'Prada Pirelli Lunna Rosa take a commanding four race lead in the Prada Cup final to maintain their charge for a final spot.',
       '-Pietro Pielso'
     ),
     new NewsCard(
       'assets/images/americas-bow.jpg',
       'Prada Cup',
-      'Ineos team Uk have it all to do after two disappointing days on  the water with Prada Pirelli Lunna Rosa opening up a commanding lead.',
+      'Ineos team Uk have it all to do after two disappointing days on the water with Prada Pirelli Lunna Rosa opening up a lead.',
       '-Ludo Motoscafo'
     ),
     new NewsCard(

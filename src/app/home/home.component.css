@@ -66,7 +66,23 @@
   transition: all 0.5s;
 }
 
-/* media query */
+.a:hover,
+.b:hover,
+.c:hover,
+.d:hover,
+.e:hover {
+  transform: scale(1.05);
+  z-index: 20;
+}
+
+.f:hover {
+  transform: scale(1.05);
+  z-index: 20;
+  margin-bottom: 20px;
+}
+
+/*-----------------MEDIA----------------- */
+
 @media (max-width: 600px) {
   #grid-area {
     width: 90%;
@@ -94,24 +110,3 @@
     grid-area: 21 / 1 / 25 / 13;
   }
 }
-
-.a:hover,
-.b:hover,
-.c:hover,
-.d:hover,
-.e:hover {
-  transform: scale(1.05);
-  z-index: 20;
-}
-
-.f:hover {
-  transform: scale(1.05);
-  z-index: 20;
-  margin-bottom: 20px;
-}
-
-/* @media only screen and (max-width: 767px) {
-  .shrink-me {
-    font-size: 16px;
-  }
-} */

@@ -17,4 +17,7 @@ ul li a {
   .footer-paragraph {
     padding-bottom: 15px;
   }
+  .row {
+    padding-bottom: 0 !important;
+  }
 }

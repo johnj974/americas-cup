@@ -83,7 +83,11 @@
           *ngFor="let news of newsList; let i = index"
         >
           <div class="card">
-            <img [src]="news.image" class="card-img-top" alt="..." />
+            <img
+              [src]="news.image"
+              class="card-img-top"
+              alt="{{ news.title }}"
+            />
             <div class="card-header">
               <h4>{{ news.title }}</h4>
             </div>

@@ -48,7 +48,6 @@ table.td {
 }
 
 @media only screen and (max-width: 768px) {
-  /* .table td, */
   .table th {
     padding: 10px 10px 0px 75px;
   }
@@ -61,12 +60,8 @@ table.td {
   .card img {
     height: 200px;
   }
-  /* .tabel td, */
+
   .table th {
     padding: 10px 10px 0px 35px;
   }
 }
-
-/* #news {
-  background-color: darkgrey;
-} */

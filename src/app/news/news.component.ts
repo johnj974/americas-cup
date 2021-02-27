@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsCard } from '../models/newscard.model';
 import { CovidService } from '../services/covid.service';
-import { CovidReport } from '../models/covidReport';
 import { CompetitionService } from '../services/competition.service';
 import { WeatherService } from '../services/weather.service';
 
@@ -37,14 +36,12 @@ export class NewsComponent implements OnInit {
     this.covidService.getCovidInfo().subscribe((data) => {
       this.covidCountry = data.country;
       this.covidInfo.push(data);
-      // console.log(this.covidInfo);
     });
   }
 
   getWeatherReport() {
     this.weatherService.getWeather().subscribe((data) => {
       this.weatherData.push(data);
-      console.log(this.weatherData);
     });
   }
 

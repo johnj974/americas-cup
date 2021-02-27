@@ -24,5 +24,6 @@ export class CompetitionComponent implements OnInit {
     this.displayMessage = true;
     let postData = entryForm.value;
     this.competitionService.postPosts(postData);
+    entryForm.reset();
   }
 }

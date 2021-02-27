@@ -6,21 +6,21 @@
         <div class="row">
           <img
             src="../../assets/images/uk-boat3.jpg"
-            alt=""
+            alt="uk sail boat ac75"
             class="img-fluid"
           />
         </div>
         <div class="row">
           <img
             src="../../assets/images/new-zealand-boat2.jpg"
-            alt=""
+            alt="new zealand sail boat ac75"
             class="img-fluid"
           />
         </div>
         <div class="row">
           <img
             src="../../assets/images/italy2-boat.jpg"
-            alt=""
+            alt="italy sail boat ac75"
             class="img-fluid"
           />
         </div>
@@ -31,6 +31,7 @@
           <div class="form-group">
             <label for="name" class="bold">Name</label>
             <input
+              id="name"
               type="text"
               class="form-control bg-contrast"
               placeholder="Full Name"
@@ -70,7 +71,7 @@
           </div>
 
           <div class="form-group">
-            <label for="phone" class="bold">Phone</label>
+            <label for="contact_subject" class="bold">Phone</label>
             <input
               type="text"
               name="phone"
@@ -104,6 +105,7 @@
           <div class="form-group">
             <label for="message" class="bold">Message</label>
             <textarea
+              id="message"
               name="message"
               class="form-control bg-contrast"
               placeholder="Feel free to leave a message"
@@ -123,30 +125,31 @@
             </div>
           </div>
         </form>
-        <!-- add area to show percentage votes for teams -->
+
         <div *ngIf="displayMessage" class="text-center">
           <p>Thank You for entering the competition</p>
+          <p>See all votes in the News section</p>
         </div>
       </div>
       <div class="col-lg-3 d-none d-lg-block">
         <div class="row">
           <img
             src="../../assets/images/americas-bow.jpg"
-            alt=""
+            alt="uk sail boat ac75"
             class="img-fluid"
           />
         </div>
         <div class="row">
           <img
             src="../../assets/images/italy3-boat.jpg"
-            alt=""
+            alt="italy sail boat ac75"
             class="img-fluid"
           />
         </div>
         <div class="row">
           <img
             src="../../assets/images/american-boat.jpg"
-            alt=""
+            alt="american sail boat ac75"
             class="img-fluid"
           />
         </div>

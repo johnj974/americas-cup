@@ -8,14 +8,6 @@
   color: #fff;
 }
 
-/* p {
-  color: #ff0000;
-  font-size: 20px;
-}
-span {
-  color: #ffffff;
-} */
-
 .img-fluid {
   height: inherit;
 }
@@ -34,6 +26,13 @@ span {
   }
 }
 
+@media (max-width: 767px) {
+  .img-fluid {
+    height: auto;
+    width: 100%;
+  }
+}
+
 @media (max-width: 1496px) {
   p {
     font-size: 16px;
@@ -41,7 +40,6 @@ span {
 }
 
 .flag {
-  /* background-image: url(../../assets/images/italyFlag.gif); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

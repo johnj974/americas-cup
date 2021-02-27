@@ -36,6 +36,7 @@ table.td {
   height: 45vh;
   width: 18rem;
   transition: 0.3s;
+  border-radius: 0;
 }
 
 .card:hover {

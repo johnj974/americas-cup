@@ -28,6 +28,10 @@ const appRoutes: Routes = [
         (m) => m.CompetitionModule
       ),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found', pathMatch: 'full' },
 ];

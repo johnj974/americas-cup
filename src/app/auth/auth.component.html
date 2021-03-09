@@ -1,7 +1,8 @@
-<section>
+<app-header>Authentication</app-header>
+<section class="bg-dark text-white">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset">
+    <div class="row py-5">
+      <div class="col-md-6">
         <div>
           <form (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
             <div class="form-group">
@@ -44,6 +45,14 @@
               Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
             </button>
           </form>
+        </div>
+      </div>
+      <div class="col-md-6 spinner">
+        <div *ngIf="isLoading">
+          <app-spinner></app-spinner>
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          <h4>{{ errorMessage }}</h4>
         </div>
       </div>
     </div>

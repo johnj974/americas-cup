@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { map, tap } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { exhaustMap, map, take, tap } from 'rxjs/operators';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CompetitionService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
   public postPosts(data) {
     this.http
@@ -20,20 +21,25 @@ export class CompetitionService {
   }
 
   public retrievePosts() {
-    return this.http
-      .get(
-        'https://americas-cup-6026a-default-rtdb.europe-west1.firebasedatabase.app/posts.json'
-      )
-      .pipe(
-        map((responseData) => {
-          const postsArray = [];
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              postsArray.push({ ...responseData[key], id: key });
-            }
+    return this.authService.user.pipe(
+      take(1),
+      exhaustMap((user) => {
+        return this.http.get(
+          'https://americas-cup-6026a-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
+          {
+            params: new HttpParams().set('auth', user.token),
           }
-          return postsArray;
-        })
-      );
+        );
+      }),
+      map((responseData) => {
+        const postsArray = [];
+        for (const key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            postsArray.push({ ...responseData[key], id: key });
+          }
+        }
+        return postsArray;
+      })
+    );
   }
 }

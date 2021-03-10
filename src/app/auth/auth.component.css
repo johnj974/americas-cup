@@ -4,3 +4,9 @@
   align-items: center;
   padding-top: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+  .buttons {
+    text-align: center;
+  }
+}

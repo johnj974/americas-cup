@@ -11,3 +11,7 @@ input.ng-valid.ng-touched,
 select.ng-valid.ng-touched {
   border: 1px solid #008000;
 }
+
+.competition-warning {
+  color: #ff0000;
+}

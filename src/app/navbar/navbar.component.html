@@ -32,6 +32,14 @@
         <li class="nav-item" routerLinkActive="active left">
           <a class="nav-link ps-3" routerLink="competition">Competition</a>
         </li>
+        <li class="nav-item" routerLinkActive="active left">
+          <a class="nav-link" routerLink="auth">Sign Up</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active right" *ngIf="user">
+          <a class="nav-link" (click)="onLogOut()" style="cursor: pointer"
+            >Log Out</a
+          >
+        </li>
       </ul>
     </div>
   </div>

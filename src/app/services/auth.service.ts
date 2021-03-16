@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   user = new BehaviorSubject<UserModel>(null);
+  signedUpUser: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
   signUp(email: string, password: string) {
+    this.signedUpUser = true;
     return this.http
       .post<AuthInterface>(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCJNPFhi0v7Kw8CN9pd6V0Zz9WG9hwkAoM',
@@ -35,6 +37,7 @@ export class AuthService {
   }
 
   signIn(email: string, password: string) {
+    this.signedUpUser = true;
     return this.http
       .post<AuthInterface>(
         'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCJNPFhi0v7Kw8CN9pd6V0Zz9WG9hwkAoM',
@@ -60,6 +63,7 @@ export class AuthService {
   logout() {
     this.user.next(null);
     this.router.navigate(['']);
+    this.signedUpUser = false;
   }
 
   private handleAuthentication(

@@ -17,6 +17,7 @@ export class AuthComponent implements OnInit {
   isLoginMode = true;
   isLoading = false;
   errorMessage: string = '';
+  loggedIn = false;
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -45,5 +46,9 @@ export class AuthComponent implements OnInit {
       }
     );
     form.reset();
+    this.loggedIn = true;
+    setTimeout(() => {
+      this.loggedIn = false;
+    }, 3000);
   }
 }

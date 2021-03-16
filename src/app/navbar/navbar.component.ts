@@ -10,12 +10,16 @@ export class NavbarComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   user = this.authService.signedUpUser;
+  loggedOut = false;
 
   ngOnInit(): void {}
 
   onLogOut() {
     this.authService.logout();
-    console.log('1 am working');
+    this.loggedOut = true;
+    setTimeout(() => {
+      this.loggedOut = false;
+    }, 3000);
     console.log(this.user);
   }
 }

@@ -9,17 +9,26 @@ import { AuthService } from '../services/auth.service';
 export class NavbarComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
-  user = this.authService.signedUpUser;
+  logOutLink: boolean = false;
+
+  user = this.authService.user;
   loggedOut = false;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.user);
+  }
 
   onLogOut() {
     this.authService.logout();
     this.loggedOut = true;
+    this.logOutLink = false;
     setTimeout(() => {
       this.loggedOut = false;
-    }, 3000);
+    }, 5000);
     console.log(this.user);
+  }
+
+  onSignUp() {
+    this.logOutLink = true;
   }
 }

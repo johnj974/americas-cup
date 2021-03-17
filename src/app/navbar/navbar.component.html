@@ -33,9 +33,9 @@
           <a class="nav-link ps-3" routerLink="competition">Competition</a>
         </li>
         <li class="nav-item" routerLinkActive="active left">
-          <a class="nav-link" routerLink="auth">Sign Up</a>
+          <a class="nav-link" routerLink="auth" (click)="onSignUp()">Sign Up</a>
         </li>
-        <li class="nav-item" routerLinkActive="active left">
+        <li class="nav-item" routerLinkActive="active left" *ngIf="logOutLink">
           <a class="nav-link" (click)="onLogOut()" style="cursor: pointer"
             >Log Out</a
           >

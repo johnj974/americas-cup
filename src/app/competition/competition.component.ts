@@ -10,7 +10,6 @@ import { CompetitionService } from '../services/competition.service';
 })
 export class CompetitionComponent implements OnInit {
   winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'UK'];
-
   displayMessage: boolean = false;
 
   constructor(

@@ -13,7 +13,7 @@ export class CompetitionComponent implements OnInit {
   displayMessage: boolean = false;
 
   constructor(
-    private http: HttpClient,
+    //private http: HttpClient,
     private competitionService: CompetitionService
   ) {}
 

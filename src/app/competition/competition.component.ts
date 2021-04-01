@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+
 import { CompetitionService } from '../services/competition.service';
 
 @Component({
@@ -9,13 +9,11 @@ import { CompetitionService } from '../services/competition.service';
   styleUrls: ['./competition.component.css'],
 })
 export class CompetitionComponent implements OnInit {
+  //.
   winnersList: string[] = ['New Zealand', 'Italy', 'USA', 'UK'];
   displayMessage: boolean = false;
 
-  constructor(
-    //private http: HttpClient,
-    private competitionService: CompetitionService
-  ) {}
+  constructor(private competitionService: CompetitionService) {}
 
   ngOnInit(): void {}
 

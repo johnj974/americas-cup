@@ -36,7 +36,6 @@ export class AuthComponent implements OnInit {
     }
     authObservable.subscribe(
       (responseData) => {
-        console.log(responseData);
         this.isLoading = false;
       },
       (error) => {

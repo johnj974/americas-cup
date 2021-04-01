@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { catchError, tap } from 'rxjs/operators';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { UserModel } from '../models/user.model';
@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
+  //.
   user = new BehaviorSubject<UserModel>(null);
-  signedUpUser: boolean = false;
+  signedUpUser = new EventEmitter<boolean>();
 
   constructor(private http: HttpClient, private router: Router) {}
 
   signUp(email: string, password: string) {
-    this.signedUpUser = true;
+    this.signedUpUser.emit(true);
     return this.http
       .post<AuthInterface>(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCJNPFhi0v7Kw8CN9pd6V0Zz9WG9hwkAoM',
@@ -37,7 +38,7 @@ export class AuthService {
   }
 
   signIn(email: string, password: string) {
-    this.signedUpUser = true;
+    this.signedUpUser.emit(true);
     return this.http
       .post<AuthInterface>(
         'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCJNPFhi0v7Kw8CN9pd6V0Zz9WG9hwkAoM',
@@ -63,7 +64,7 @@ export class AuthService {
   logout() {
     this.user.next(null);
     this.router.navigate(['']);
-    this.signedUpUser = false;
+    this.signedUpUser.emit(false);
   }
 
   private handleAuthentication(

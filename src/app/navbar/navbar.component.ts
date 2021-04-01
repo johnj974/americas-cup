@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -6,16 +7,20 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
+  //.
+  user: Subscription;
+
   constructor(private authService: AuthService) {}
 
   logOutLink: boolean = false;
 
-  user = this.authService.user;
   loggedOut = false;
 
   ngOnInit(): void {
-    console.log(this.user);
+    this.user = this.authService.signedUpUser.subscribe((data: boolean) => {
+      this.logOutLink = data;
+    });
   }
 
   onLogOut() {
@@ -25,10 +30,9 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       this.loggedOut = false;
     }, 5000);
-    console.log(this.user);
   }
 
-  onSignUp() {
-    this.logOutLink = true;
+  ngOnDestroy() {
+    this.user.unsubscribe();
   }
 }

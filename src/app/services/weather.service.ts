@@ -10,7 +10,7 @@ export class WeatherService {
 
   getWeather() {
     return this.http.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=auckland&units=metric&appid=c84144b5229259369c06211673b893d1`
+      `https://api.openweathermap.org/data/2.5/weather?q=auckland&units=metric&appid=${this.weatherKey}`
     );
   }
 }

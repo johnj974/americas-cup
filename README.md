@@ -1,4 +1,5 @@
 # AmericasCup
+This project is not completed, Progress can be viewed at https://johnj974.github.io/americas-cup
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 

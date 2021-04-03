@@ -4,17 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { CompetitionRoutingModule } from './competion-routing.module';
 import { CompetitionComponent } from './competition.component';
-// import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [CompetitionComponent],
-  imports: [
-    CommonModule,
-    CompetitionRoutingModule,
-    FormsModule,
-    SharedModule,
-    // HttpClientModule,
-  ],
+  imports: [CommonModule, CompetitionRoutingModule, FormsModule, SharedModule],
   exports: [CompetitionComponent],
 })
 export class CompetitionModule {}

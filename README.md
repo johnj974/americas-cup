@@ -1,11 +1,9 @@
 # AmericasCup
 
-This project is not completed,
-
 Progress can be viewed at [Americas-Cup](https://johnj974.github.io/americas-cup)
 
 The Americas Cup site is a site which shows the boats which are to be used in the 36th running of this event,
-It was created to be a light introduction to the world of Americas Cup yacht racing,
+It was created to be a light introduction to the world of Americas Cup yacht racing using primarily the Angular Framework.
 
 ## Technologies Used
 
@@ -20,6 +18,7 @@ This project was generated with:
 - [Firebase Database](https://firebase.google.com/)
 - [Covid api](https://github.com/disease-sh/API)
 - [Github](https://github.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## User Experience
 
@@ -46,35 +45,31 @@ to the team information page.
 
 ## Testing
 
-The project has been tested on various differant screens to ensure that it is a mobile friendly site. Manual site testing shows that all links are working correctly and that competition votes are being counted and recorded correctly. Information coming from the weather and covid api are updating correctly. A small shadow can be observed on the right side of the images on the home page when the focused in images are compressing back to their original size but this disappears after a second.
+The project has been tested on various differant screens to ensure that it is a mobile friendly site. Manual site testing shows that all links are working correctly and that competition votes are being counted and recorded correctly. Information coming from the weather and covid api are updating correctly.
+
+A small shadow can be observed on the right side of the images on the home page when the focused in images are compressing back to their original size but this disappears after a second.
 
 ## Local Deployment
 
-If you wish to copy the project follow these steps
+If you wish to copy the project follow these steps:
 
 - Visit [here](https://github.com/johnj974/americas-cup)
 - Click on the green Code button.
 - To clone the repo using http copy the provided address.
 - Open a git bash terminal.
-- navigate to a folder which will hold the cloned project.
-- Type git clone (copied address) and press enter.
-- Open the project in your editor
-- Run npm install to include dependencies
-- run the development server with ng serve
-- Get api keys for the news section
+- Navigate to a folder which will hold the cloned project.
+- Type: git clone `copied address` and press enter.
+- Open the project in your editor.
+- Run `npm install` to include dependencies.
+- Run the development server with `ng serve`.
+- Get new api keys for the news section.
 
-## Running end-to-end tests
+## Credits
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- [Oraclefrontovik](https://oraclefrontovik.com/2020/04/19/openweathermap-two-useful-conversions-for-wind-data/) for help implementing a compass direction pipe.
+- [Max Schwarzmuller](https://academind.com/) for help with the authentication service.
+- [Stack Overflow](https://stackoverflow.com/) the solution to a lot of questions.
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

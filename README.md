@@ -5,6 +5,8 @@ Progress can be viewed at [Americas-Cup](https://johnj974.github.io/americas-cup
 The Americas Cup site is a site which shows the boats which are to be used in the 36th running of this event,
 It was created to be a light introduction to the world of Americas Cup yacht racing using primarily the Angular Framework.
 
+<img src="src/assets/images/main-page.png">
+
 ## Technologies Used
 
 This project was generated with:
